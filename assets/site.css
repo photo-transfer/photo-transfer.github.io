@@ -216,6 +216,20 @@ h3 {
   opacity: 0.72;
 }
 
+.app-store-badge {
+  display: inline-block;
+  width: 190px;
+  line-height: 0;
+  text-decoration: none;
+  filter: drop-shadow(0 10px 26px rgba(0, 0, 0, 0.18));
+}
+
+.app-store-badge img {
+  display: block;
+  width: 100%;
+  height: auto;
+}
+
 .hero-art {
   position: relative;
   min-height: 620px;

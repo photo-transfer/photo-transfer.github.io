@@ -2,6 +2,7 @@
 
 ## URLs
 
+- App Store URL / App Store 地址: `https://apps.apple.com/app/id6788644906`
 - Marketing URL / 营销网址: `https://<username>.github.io/<repo>/`
 - Support URL / 技术支持网址: `https://<username>.github.io/<repo>/support/`
 - Privacy Policy URL / 隐私政策网址: `https://<username>.github.io/<repo>/privacy/`

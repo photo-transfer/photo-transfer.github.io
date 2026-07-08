@@ -21,10 +21,15 @@
 
 html {
   scroll-behavior: smooth;
+  width: 100%;
+  max-width: 100%;
+  overflow-x: hidden;
 }
 
 body {
   margin: 0;
+  width: 100%;
+  max-width: 100%;
   overflow-x: hidden;
   background:
     radial-gradient(circle at top left, rgba(10, 132, 255, 0.12), transparent 36rem),
@@ -51,6 +56,8 @@ a {
   position: sticky;
   top: 0;
   z-index: 20;
+  width: 100%;
+  max-width: 100vw;
   border-bottom: 1px solid rgba(226, 232, 240, 0.82);
   background: rgba(255, 255, 255, 0.88);
   backdrop-filter: blur(20px);
@@ -87,7 +94,10 @@ a {
 .nav-links {
   display: flex;
   align-items: center;
+  flex-wrap: wrap;
   gap: 12px;
+  min-width: 0;
+  max-width: 100%;
   color: var(--muted);
   font-size: 15px;
   font-weight: 750;
@@ -247,12 +257,13 @@ h3 {
   align-items: center;
   justify-content: center;
   max-width: 100%;
-  overflow: visible;
+  overflow: hidden;
 }
 
 .hero-diagram {
   display: block;
   width: min(100%, 620px);
+  max-width: 100%;
   height: auto;
 }
 
@@ -402,7 +413,7 @@ h3 {
 
   .nav-links {
     width: 100%;
-    overflow-x: auto;
+    overflow: visible;
     padding-bottom: 4px;
   }
 
@@ -415,7 +426,7 @@ h3 {
   .hero-art {
     min-height: 300px;
     max-width: 100%;
-    overflow: visible;
+    overflow: hidden;
   }
 
   .grid.three,
@@ -460,7 +471,7 @@ h3 {
   }
 
   .hero-diagram {
-    width: min(112%, 480px);
+    width: min(100%, 480px);
   }
 
   .card,

@@ -23,6 +23,7 @@ html {
 
 body {
   margin: 0;
+  overflow-x: hidden;
   background:
     radial-gradient(circle at top left, rgba(10, 132, 255, 0.15), transparent 36rem),
     radial-gradient(circle at 90% 20%, rgba(18, 185, 129, 0.12), transparent 28rem),
@@ -141,6 +142,10 @@ a {
   min-height: calc(100vh - 92px);
 }
 
+.hero > * {
+  min-width: 0;
+}
+
 .eyebrow {
   display: inline-flex;
   align-items: center;
@@ -166,6 +171,7 @@ h3 {
 h1 {
   max-width: 760px;
   font-size: clamp(46px, 7vw, 84px);
+  overflow-wrap: anywhere;
 }
 
 h2 {
@@ -380,6 +386,8 @@ h3 {
 
   .hero-art {
     min-height: 0;
+    max-width: 100%;
+    overflow: hidden;
   }
 
   .phone-stack {
@@ -387,8 +395,10 @@ h3 {
     display: flex;
     gap: 0;
     align-items: stretch;
-    margin: 0 -16px;
-    padding: 18px 16px 34px;
+    width: 100%;
+    max-width: 100%;
+    margin: 0;
+    padding: 18px 14px 34px;
     overflow-x: auto;
     overscroll-behavior-x: contain;
     scroll-padding-inline: 16px;
@@ -408,15 +418,16 @@ h3 {
 
   .phone-shot {
     position: static;
-    flex: 0 0 min(72vw, 330px);
-    width: min(72vw, 330px);
+    flex: 0 0 min(68vw, 330px);
+    width: min(68vw, 330px);
+    max-width: 330px;
     border-radius: 24px;
     scroll-snap-align: center;
     transform: none;
   }
 
   .phone-shot + .phone-shot {
-    margin-left: -64px;
+    margin-left: max(-56px, -14vw);
   }
 
   .phone-shot.primary {
@@ -459,12 +470,13 @@ h3 {
   }
 
   .phone-shot {
-    flex-basis: min(78vw, 318px);
-    width: min(78vw, 318px);
+    flex-basis: min(74vw, 306px);
+    width: min(74vw, 306px);
+    max-width: 306px;
   }
 
   .phone-shot + .phone-shot {
-    margin-left: -76px;
+    margin-left: max(-64px, -18vw);
   }
 
   .card,
